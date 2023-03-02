@@ -1,0 +1,4 @@
+
+window.onbeforeunload = function() {
+    return "";
+};
