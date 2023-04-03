@@ -4,6 +4,12 @@ body {
   margin: 0;
 }
 
+@media (orientation: portrait) {
+  #mainContainer {
+    flex-direction: column;
+  }
+}
+
 .videorender {
   background: #000;
   border: 1px solid #666;
