@@ -13,8 +13,10 @@ const App = () => {
       e('div', {id: 'actionButtons', style: {backgroundColor: '#FFF2', margin: '4px'}},
         e('button', {id: 'clip', onClick: () => {
           if (clipStart) {
-            var clipEnd = document.getElementById('videoPlayer').currentTime;
-            var newClip = {start: clipStart, end: clipEnd, id: clipStart.toString()};
+            var videoPlayer = document.getElementById('videoPlayer');
+            var clipEnd = videoPlayer.currentTime;
+            var videoLength = videoPlayer.duration;
+            var newClip = {start: clipStart, end: clipEnd, totalLength: videoLength, id: clipStart.toString()};
             setVideoClips([...videoClips, newClip]);
             setClipStart(null);
           } else {
@@ -26,8 +28,7 @@ const App = () => {
       ),
       e('div', {id: 'videoClips', style: {display: 'flex', flexWrap: 'wrap', flex: 1, backgroundColor: '#0002', overflow: 'scroll'}},
         videoClips.map((clip) => {
-          var {start, end, id} = clip;
-          return e(Clip, {start, end, id, key: id, onDelete: (id) => {
+          return e(Clip, {...clip, key: clip.id, onDelete: (id) => {
             setVideoClips(videoClips.filter((clip) => clip.id !== id));
           }});
         }),
