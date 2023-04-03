@@ -21,3 +21,7 @@ yarn build
 ## ToDo
 
 - [ ] remove the readme file from the export.
+
+## Resources
+
+- [Add react to a website](https://fr.reactjs.org/docs/add-react-to-a-website.html)
