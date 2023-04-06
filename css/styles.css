@@ -1,5 +1,13 @@
 body {
   background: #111;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+@media (orientation: portrait) {
+  #mainContainer {
+    flex-direction: column;
+  }
 }
 
 .videorender {

@@ -18,6 +18,20 @@ To export the website, run:
 yarn build
 ```
 
+To run the dev server, run:
+
+```bash
+yarn dev
+```
+
 ## ToDo
 
-- [ ] remove the readme file from the export.
+- [ ] remove the readme file from the export
+- [ ] create a clip from a long press of the clip button
+- [ ] hide the video player when no file is loaded
+- [ ] be able do reset the layout
+- [ ] save and load a project
+
+## Resources
+
+- [Add react to a website](https://fr.reactjs.org/docs/add-react-to-a-website.html)
